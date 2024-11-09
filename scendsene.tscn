@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6y08djvbfdh6"]
+
+[ext_resource type="Texture2D" uid="uid://fjavmsja570n" path="res://kenney_abstract-platformer/Tilesheet/tilesheet_complete.png" id="1_1irp1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_473k3"]
+size = Vector2(190, 50)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(110, 80)
+texture = ExtResource("1_1irp1")
+centered = false
+region_enabled = true
+region_rect = Rect2(352, 576, 128, 51)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+visible = false
+position = Vector2(95, 25)
+shape = SubResource("RectangleShape2D_473k3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(110, 80)
+texture = ExtResource("1_1irp1")
+centered = false
+region_enabled = true
+region_rect = Rect2(352, 576, 128, 51)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
+visible = false
+position = Vector2(95, 25)
+shape = SubResource("RectangleShape2D_473k3")
+metadata/_edit_group_ = true
